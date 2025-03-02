@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Redirect</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to detect if the device is mobile
+            function isMobile() {
+                return /Mobi|Android/i.test(navigator.userAgent);
+            }
+
+            // Redirect based on device type
+            if (isMobile()) {
+                window.location.href = "mobile.html";
+            } else {
+                window.location.href = "desktop.html";
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
